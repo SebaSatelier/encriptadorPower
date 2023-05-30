@@ -43,13 +43,12 @@ const devolucion = (value, fn) => {
 const copiar = (texto) => {
     navigator.clipboard.writeText(texto)
     .then(function() {
-      console.log("Texto copiado al portapapeles: " + texto);
+      alert("Texto copiado al portapapeles: " + texto);
     })
     .catch(function(error) {
-      console.error("Error al copiar el texto: " + error);
+      alert("Error al copiar el texto: " + error);
     });
 }
-
 
 
 botonEncriptar.addEventListener("click", () =>{
