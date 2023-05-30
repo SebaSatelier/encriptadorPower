@@ -6,6 +6,8 @@ const botonDesencriptar = document.getElementById("desencriptar");
 
 const arearespuesta = document.getElementById("devolucion");
 
+const botonCopiar = document.getElementsByClassName("boton-copiar")[0];
+
 const desEncriptado = (value) => {
     let textoDesencriptado = value.replaceAll("ai","a")
     .replaceAll("enter","e")
@@ -34,8 +36,18 @@ const manejarTexto = (value, fn)=>{
 }
 const devolucion = (value, fn) => {
     const nuevoValor = manejarTexto(value,fn);
-    arearespuesta.innerText = nuevoValor
+    arearespuesta.value = nuevoValor
     textarea.value = "";
+}
+
+const copiar = (texto) => {
+    navigator.clipboard.writeText(texto)
+    .then(function() {
+      console.log("Texto copiado al portapapeles: " + texto);
+    })
+    .catch(function(error) {
+      console.error("Error al copiar el texto: " + error);
+    });
 }
 
 
@@ -48,4 +60,10 @@ botonEncriptar.addEventListener("click", () =>{
 botonDesencriptar.addEventListener("click", () =>{
     const texto = textarea.value
     devolucion(texto)});
+
+
+botonCopiar.addEventListener('click', () => {
+    const texto = arearespuesta.value
+    copiar(texto)
+})    
     

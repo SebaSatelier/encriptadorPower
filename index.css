@@ -1,5 +1,6 @@
 body{
     background-color: rgb(168, 167, 200);
+    font-family: 'Roboto Serif', serif;
 }
 
 header{
@@ -12,6 +13,7 @@ header{
 
 h1{
     font-size: 3em;
+    font-family: 'Roboto Serif', serif;
 }
 
 main{
@@ -71,12 +73,28 @@ button:hover{
 
 
 .texto-cambiado{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border: 1px solid black;
     border-radius: 5px;
     height: 73vh;
     width: 35%;
     background-color: rgb(219, 219, 251);
     box-shadow: 0px 0px 10px rgb(97, 97, 97);
+}
+
+#devolucion{
+    background: none;
+    height: 90%;
+    width: 90%;
+    font-size: 1.5em;
+    margin: 1% auto;
+    text-align: center;
+}
+
+.boton-copiar{
+ margin-bottom: 3%;
 }
 
 footer{
