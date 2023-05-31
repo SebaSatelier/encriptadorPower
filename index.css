@@ -1,4 +1,5 @@
 body{
+    height: 100%;
     background-color: rgb(168, 167, 200);
     font-family: 'Roboto Serif', serif;
 }
@@ -26,7 +27,7 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 75vh;
+    height: 75%;
 }
 
 section{
@@ -61,8 +62,11 @@ div{
 button{
     text-transform: uppercase;
     color: white;
+    text-align: center;
+    font-size: 0.8em;
     width: 20%;
-    padding: 10px;
+    min-width: 110px;
+    padding: 1%;
     border: none;
     border-radius: 5px;
     margin: 0 4%;
@@ -101,6 +105,8 @@ button:hover{
 
 .boton-copiar{
  margin-bottom: 3%;
+ text-align: center;
+ padding: 2%;
 }
 
 footer{
@@ -116,7 +122,49 @@ a{
 
 }
 
-img{
+a > img{
     height: 100%;
     background:none;
 }
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 800px) {
+    .logo-alura{
+        height: 55%;
+        margin: auto 23% auto 2%;
+    }
+    h1{
+        font-size: 1.5em;
+    }
+    main{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    section, .texto-cambiado{
+        width: 90%;
+        margin-bottom: 1%;
+    }
+
+    button{
+        text-transform: uppercase;
+        color: white;
+        font-size: 0.8em;
+        width: 20%;
+        min-width: 110px;
+        padding: 1%;  
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up)
+@media only screen and (min-width: 600px) {...}
+
+Medium devices (landscape tablets, 768px and up)
+@media only screen and (min-width: 768px) {...}
+
+Large devices (laptops/desktops, 992px and up)
+@media only screen and (min-width: 992px) {...}
+
+Extra large devices (large laptops and desktops, 1200px and up)
+@media only screen and (min-width: 1200px) {...} */
